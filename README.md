@@ -45,7 +45,7 @@ flowchart LR
 Star the repository by pressing the topmost-right button to start your wonderful journey.
 
 
-## How Can You Contribute?
+## How You Can Contribute?
 
 So, basically add any code file in any language you want which might be a `hello-world` program or a complex program but, it should passes `Code Linting` workflow then only I'd be able to merge your PR. So, this is simple task for you to make your first contribution.
 
