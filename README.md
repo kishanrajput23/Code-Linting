@@ -12,23 +12,25 @@
 </div>
 
 
-### This repository aims to help code beginners with their first successful pull request and open source contribution. :partying_face:
+## This repository aims to help code beginners with their first successful pull request and open source contribution
 
 :star: Feel free to use this project to make your first contribution to an open-source project on GitHub. Practice making your first pull request to a public repository before doing the real thing!
 
 :star: Make sure to grab some cool swags during Hacktoberfest by getting involved in the open-source community.
 
-### This repository is open to all members of the GitHub community. Any member can contribute to this project! :grin:
+### This repository is open to all members of the GitHub community. Any member can contribute to this project
 
-## What is Hacktoberfest? :thinking:
-A month-long celebration from October 1st to October 31st presented by [Digital Ocean](https://hacktoberfest.digitalocean.com/) and [DEV Community](https://dev.to/) collaborated with [GitHub](https://github.com/blog/2433-celebrate-open-source-this-october-with-hacktoberfest) to get people involved in [Open Source](https://github.com/open-source). Create your very first pull request to any public repository on GitHub and contribute to the open-source developer community.
+## What is Hacktoberfest?
+A month-long celebration from October 1st to October 31st presented by [Digital Ocean](https://hacktoberfest.digitalocean.com/) and [DEV Community](https://dev.to/) collaborated with [GitHub](https://github.com/blog/2433-celebrate-open-source-this-october-with-hacktoberfest) to get people involved in [Open Source](https://github.com/open-source).
+Create your very first pull request to any public repository on GitHub and contribute to the open-source developer community.
 
 [https://hacktoberfest.digitalocean.com/](https://hacktoberfest.digitalocean.com/)
 
-## Rules :fire:
-To qualify for the __official limited edition Hacktoberfest shirt__, you must register [here](https://hacktoberfest.digitalocean.com/) and make four Pull Requests (PRs) between October 1-31, 2023 (in any time zone). PRs can be made to any public repository on GitHub, not only the ones with issues labeled Hacktoberfest. This year, the __first 40,000__ participants who complete Hacktoberfest can elect to receive one of two prizes: a tree planted in their name, or the Hacktoberfest 2022 t-shirt.
+## Rules
+To qualify for the __official limited edition Hacktoberfest shirt__, you must register [here](https://hacktoberfest.digitalocean.com/) and make four Pull Requests (PRs) between October 1-31, 2023 (in any time zone). PRs can be made to any public repository on GitHub, not only the ones with issues labeled Hacktoberfest.
+This year, the __first 40,000__ participants who complete Hacktoberfest can elect to receive one of two prizes: a tree planted in their name, or the Hacktoberfest 2022 t-shirt.
 
-## Steps to follow :scroll:
+## Steps to follow
 
 ### Tip : Complete this process in GitHub (in your browser)
 
@@ -52,10 +54,10 @@ So, basically add any code file in any language you want which might be a `hello
 Learn about GitHub Actions and code linting in the following resources:
 1. [GitHub Actions](https://docs.github.com/en/actions)
 2. [Code Linting](https://www.perforce.com/blog/qac/what-lint-code-and-what-linting-and-why-linting-important)
-3. [Github Action Video on Code With Scaler Channel](https://www.youtube.com/watch?v=b_VypAwsvZI&ab_channel=CodewithScaler)
-4. [How to setup Linter Github Actions for your repository](https://www.freecodecamp.org/news/github-super-linter/)
+3. [GitHub Action Video on Code With Scaler Channel](https://www.youtube.com/watch?v=b_VypAwsvZI&ab_channel=CodewithScaler)
+4. [How to setup Linter GitHub Actions for your repository](https://www.freecodecamp.org/news/github-super-linter/)
 
-## Awesome contributors :star_struck:
+## Awesome contributors
 <a href="https://github.com/kishanrajput23/Code-Linting/graphs/contributors">
   <img src="https://contributors-img.web.app/image?repo=kishanrajput23/Code-Linting" />
 </a>
@@ -63,12 +65,12 @@ Learn about GitHub Actions and code linting in the following resources:
 Made with [contributors-img](https://contributors-img.web.app).
 
 
-## Help Contributing Guides :crown:
+## Help Contributing Guides
 
 We love to have `articles` and `codes` in different languages and the `betterment` of existing ones.
 
 Please discuss it with us first by creating a new issue.
 
-:tada: :confetti_ball: :smiley: _**Happy Contributing**_ :smiley: :confetti_ball: :tada:
+__Happy Contributing__
 
 ## Author 🙋‍♂️ : [Find Me Here](https://linktr.ee/kishan_rajput23)
