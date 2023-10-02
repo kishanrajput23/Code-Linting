@@ -1,0 +1,306 @@
+#include <bits/stdc++.h>void insertAtTail(Node *&head, int val)
+{ /*TIME COMP..... O(N) ,
+But if they have given tail instead of head then
+we don't have to traverse
+So, the TIME COMPLE... at that time is O(1)*/
+    Node *temp = head;
+    while (temp->next != NULL)
+    {
+        temp = temp->next;
+    }
+    Node *newNode = new Node(val);
+    temp->next = newNode;
+}
+using namespace std;
+class Node
+{
+public:
+    int value;
+    Node *next;
+    Node(int data)
+    {
+        value = data;
+        next = NULL;
+    }
+};
+
+// To insert Node at head
+void insertAtHead(Node *&head, int val)
+
+{ // TIME COMPLE.. O(1)
+    Node *newNode = new Node(val);
+    newNode->next = head;
+    head = newNode;
+}
+
+// To insert Node at tail
+
+
+// To insert Node at arbitrary Position (at given index)
+void insertAtArbitrary(Node *&head, int index, int val)
+{
+    if (index == 0)
+    {
+        insertAtHead(head, val);
+        return;
+    }
+    Node *newNode = new Node(val);
+    Node *temp = head;
+    while ((index--) - 1)
+    {
+        temp = temp->next;
+    }
+    newNode->next = temp->next;
+    temp->next = newNode;
+}
+
+// To Update value at a position
+void updateAtPosition(Node *&head, int index, int val)
+{
+    Node *temp = head;
+    while (index--)
+    {
+        temp = temp->next;
+    }
+    temp->value = val;
+}
+
+// Deleting the Node the at the start
+void deleteAtHead(Node *&head)
+{
+    Node *temp = head;
+    head = head->next;
+    free(temp);
+}
+
+// Deleting the Node the at the end
+void deleteAtTail(Node *&head)
+{
+    Node *second_last = head;
+    while (second_last->next->next != NULL)
+    {
+        second_last = second_last->next;
+    }
+    Node *temp = second_last->next;
+    second_last->next = NULL;
+    free(temp);
+}
+
+// Deleting the Node at the Kth Position
+void deleteAtGivenPosition(Node *&head, int index)
+{
+
+    if (index == 0)
+    {
+        deleteAtHead(head);
+    }
+
+    Node *previous = head;
+    while ((index--) - 1)
+    {
+        previous = previous->next;
+    }
+    Node *temp = previous->next;
+    previous->next = previous->next->next;
+    free(temp);
+}
+
+// Delete every alternative element starting from 2nd element
+void deleteAlternativeElement(Node *&head)
+{
+    Node *current = head;
+    Node *temp;
+    while (current != NULL && current->next != NULL)
+    {
+
+        temp = current->next;
+        current->next = current->next->next;
+        free(temp);
+        current = current->next;
+    }
+}
+
+// Delete all duplicates from the sorted Linkedlist
+void deleteDupliatedInSortedLL(Node *&head)
+{
+    Node *current = head;
+    Node *temp;
+    while (current->next != NULL)
+    {
+        if (current->value != current->next->value)
+        {
+            current = current->next;
+        }
+        else
+        {
+            temp = current->next;
+            current->next = current->next->next;
+            free(temp);
+        }
+    }
+}
+void DeleteDuplictedNodesUsingMaamMethod(Node *&head)
+{
+    Node *current = head;
+    while (current)
+    {
+        while (current->next && current->value == current->next->value)
+        {
+            Node *temp = current->next;
+            current->next = current->next->next;
+            free(temp);
+        }
+        current = current->next;
+    }
+}
+
+// Printing Reverse LinkedList
+void PrintingReverseLL(Node *head)
+{
+    // Base case
+    if (head == NULL)
+        return;
+
+    // Recursive case
+    PrintingReverseLL(head->next);
+    cout << head->value << "-->";
+}
+
+// Reverse LinkedList normally and using Recursion
+Node *ReverseLL(Node *&head)
+{
+    Node *previous = NULL;
+    Node *current = head;
+    // move all three pointer one step ahead
+    while (current != NULL)
+    {
+        Node *nextptr = current->next;
+        current->next = previous;
+        previous = current;
+        current = nextptr;
+    }
+    // now the loop end So, my previous pointer is my last node which is new node .
+    Node *new_node = previous;
+    return new_node;
+}
+Node *ReverseLLusingRecursion(Node *&head)
+{
+    // Base condition
+    if (head == NULL || head->next == NULL)
+    {
+        return head;
+    }
+
+    // recursion condition
+    Node *new_head = ReverseLLusingRecursion(head->next);
+    head->next->next = head;
+    head->next = NULL;
+    return new_head;
+}
+
+// Reverse nodes Kth at a time
+Node *ReverseByKthNode(Node *head, int number)
+{
+    Node *previous = NULL;
+    Node *current = head;
+    int count = 0; // for counting first k nodes
+    while ((count < number) && current != NULL)
+    { // reversing first k nodes
+        Node *nextptr = current->next;
+        current->next = previous;
+        previous = current;
+        current = nextptr;
+        count++;
+    }
+    // current pointer will give us (k+1)node.
+    if (current != NULL)
+    {
+        Node *new_head = ReverseByKthNode(current, number); // recursive call
+        head->next = new_head;
+    }
+    return previous; // previous will give the new head to the connected linkedlist
+}
+
+void deleteNodewithvalue(Node *&head, int value)
+{
+    Node *previous = NULL;
+    Node *current = head;
+    while (current != NULL)
+    {
+        if (current->value == value)
+        {
+            previous->next = current->next;
+            break;
+        }
+        previous = current;
+        current = current->next;
+    }
+}
+
+// To display the linkedList
+void display(Node *head)
+{
+    Node *temp = head;
+    while (temp != NULL)
+    {
+        cout << temp->value << "-->";
+        temp = temp->next;
+    }
+    cout << "NULL" << endl;
+}
+
+int main()
+{
+    Node *head = NULL;
+    cout << "insertAtHead-->";
+    insertAtHead(head, 2);
+    display(head);
+    cout << "insertAtHead-->";
+    insertAtHead(head, 1);
+    display(head);
+    cout << "insertAtTail-->";
+    insertAtTail(head, 3);
+    display(head);
+    cout << "insertAtArbitrary-->";
+    insertAtArbitrary(head, 3, 4);
+    display(head);
+    cout << "UpdateAtPosition-->";
+    updateAtPosition(head, 3, 5);
+    display(head);
+    cout << "insertAtTail-->";
+    insertAtTail(head, 5);
+    insertAtTail(head, 5);
+    insertAtTail(head, 5);
+    insertAtTail(head, 6);
+    insertAtTail(head, 6);
+    insertAtTail(head, 7);
+    insertAtTail(head, 7);
+    display(head);
+    //     cout << "deleteAtGivenPosition-->";
+    //     deleteAtGivenPosition(head, 2);
+    //     display(head);
+    //     cout << "deleteAtHead-->";
+    //     deleteAtHead(head);
+    //     display(head);
+    //     cout << "deleteAtTail-->";
+    //     deleteAtTail(head);
+    //     display(head);
+    // }
+    // cout<<"DeleteAlternativeElement-->";
+    // deleteAlternativeElement(head);
+    cout << "deleteDupliatedInSortedLL-->";
+    deleteDupliatedInSortedLL(head);
+    display(head);
+    // cout << "Printing Reverse LinkedList-->";
+    // PrintingReverseLL(head);
+    // cout << endl;
+    // cout << "LL Reversed-->";
+    // head = ReverseLLusingRecursion(head);
+    // display(head);
+    head = ReverseByKthNode(head, 2);
+
+    display(head);
+    cout << "here";
+    deleteNodewithvalue(head, 5);
+    display(head);
+}
