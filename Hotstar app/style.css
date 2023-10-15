@@ -3,14 +3,12 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
     width: 100%;
     background: #0c111b;
     position: relative;
     font-family: roboto, sans-serif;
 }
-
 .navbar {
     width: 100%;
     height: 80px;
@@ -23,17 +21,14 @@ body {
     display: flex;
     align-items: center;
 }
-
 .brand-logo {
     height: 70px;
 }
-
 .nav-links {
     margin-top: 10px;
     display: flex;
     list-style: none;
 }
-
 .nav-items a {
     text-decoration: none;
     margin-left: 20px;
@@ -41,12 +36,10 @@ body {
     color: #fff;
     opacity: 0.9;
 }
-
 .right-container {
     display: block;
     margin-left: auto;
 }
-
 .search-box {
     border: none;
     border-bottom: 1px solid #aaa;
@@ -60,12 +53,10 @@ body {
     font-weight: 500;
     transition: 0.5s;
 }
-
 .search-box:focus {
     width: 400px;
     border-color: #1f80e0;
 }
-
 .sub-btn {
     background: #1f80e0;
     height: 30px;
@@ -79,7 +70,6 @@ body {
     font-size: 12px;
     margin: 0 10px;
 }
-
 .login-link {
     color: #fff;
     opacity: 0.9;
@@ -88,7 +78,6 @@ body {
     font-weight: 700;
     text-decoration: none;
 }
-
 .carousel-container {
     position: relative;
     width: 100%;
@@ -97,7 +86,6 @@ body {
     overflow-x: hidden;
     margin-top: 80px;
 }
-
 .carousel {
     display: flex;
     width: 92%;
@@ -105,7 +93,6 @@ body {
     position: relative;
     margin: auto;
 }
-
 .slider {
     flex: 0 0 auto;
     margin-right: 30px;
@@ -118,7 +105,6 @@ body {
     transition: 1s;
     overflow: hidden;
 }
-
 .slider img {
     width: 70%;
     min-height: 100%;
@@ -126,7 +112,6 @@ body {
     display: block;
     margin-left: auto;
 }
-
 .slide-content {
     position: absolute;
     width: 50%;
@@ -135,13 +120,11 @@ body {
     background: linear-gradient(to right, #030b17 80%, #0c111b00);
     color: #fff;
 }
-
 .movie-title {
     padding-left: 50px;
     text-transform: capitalize;
     margin-top: 80px;
 }
-
 .movie-des {
     width: 80%;
     line-height: 30px;
@@ -149,7 +132,6 @@ body {
     margin-top: 30px;
     opacity: 0.8;
 }
-
 .video-card-container {
     position: relative;
     width: 92%;
@@ -159,7 +141,6 @@ body {
     margin-bottom: 20px;
     justify-content: space-between;
 }
-
 .video-card {
     position: relative;
     min-width: calc(100% / 5 - 10px);
@@ -169,22 +150,18 @@ body {
     overflow: hidden;
     background: #030b17;
 }
-
 .card-image,
 .card-video {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-
 .card-video {
     position: absolute;
 }
-
 .video-card:hover .card-image {
     display: none;
 }
-
 .title {
     color: #fff;
     opacity: 0.9;
@@ -193,14 +170,12 @@ body {
     font-size: 22px;
     font-weight: 500;
 }
-
 .movies-list {
     width: 100%;
     height: 220px;
     position: relative;
     margin: 10px 0 20px;
 }
-
 .card-container {
     position: relative;
     width: 92%;
@@ -213,11 +188,9 @@ body {
     overflow-y: visible;
     scroll-behavior: smooth;
 }
-
 .card-container::-webkit-scrollbar {
     display: none;
 }
-
 .card {
     position: relative;
     min-width: 150px;
@@ -228,21 +201,17 @@ body {
     margin-right: 10px;
     transition: 0.5s;
 }
-
 .card-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-
 .card:hover {
     transform: scale(1.1);
 }
-
 .card:hover .card-body {
     opacity: 1;
 }
-
 .card-body {
     opacity: 0;
     width: 100%;
@@ -255,7 +224,6 @@ body {
     padding: 10px;
     transition: 0.5s;
 }
-
 .name {
     color: #fff;
     font-size: 15px;
@@ -263,7 +231,6 @@ body {
     text-transform: capitalize;
     margin-top: 60%;
 }
-
 .des {
     color: #fff;
     opacity: 0.8;
@@ -271,7 +238,6 @@ body {
     font-weight: 500;
     font-size: 12px;
 }
-
 .watchlist-btn {
     position: relative;
     width: 100%;
@@ -286,7 +252,6 @@ body {
     padding: 10px 5px;
     border-radius: 5px;
 }
-
 .watchlist-btn::before {
     content: "";
     position: absolute;
@@ -298,12 +263,10 @@ body {
     background-size: cover;
     transform: scale(0.4);
 }
-
 .watchlist-btn:hover {
     color: #fff;
     background: rgba(255, 255, 255, 0.1);
 }
-
 .pre-btn,
 .nxt-btn {
     position: absolute;
@@ -315,24 +278,20 @@ body {
     cursor: pointer;
     outline: none;
 }
-
 .pre-btn {
     left: 0;
     background: linear-gradient(to right, #0c111b 0%, #0c111b00);
 }
-
 .nxt-btn {
     right: 0;
     background: linear-gradient(to left, #0c111b 0%, #0c111b00);
 }
-
 .pre-btn img,
 .nxt-btn img {
     width: 15px;
     height: 20px;
     opacity: 0;
 }
-
 .pre-btn:hover img,
 .nxt-btn:hover img {
     opacity: 1;
