@@ -1,0 +1,373 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    --first-color: #111317;
+    --first-color-light: #1f2125;
+    --first-color-extra-light: #35373b;
+    --second-color: rgb(248, 248, 25);
+    --second-color-dark: rgb(219, 219, 19);
+    --text-color-light: #d1d5db;
+    --white-color: #fff;
+    --max-width: 1200px;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.section-container{
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 5rem 1rem;
+}
+
+.section-header{
+    margin-bottom: 1rem;
+    font-size: 2.25rem;
+    font-weight: 600;
+    text-align: center;
+    color: var(--white-color);
+}
+
+.section-subheader{
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+    color: var(--text-color-light);
+}
+
+.btn{
+    padding: 1rem 2rem;
+    outline: none;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--white-color);
+    background-color: var(--second-color);
+    border-radius: 30px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover{
+    background-color: var(--second-color-dark);
+    border-color: 2px solid var(--white-color);
+   
+}
+
+img{
+    width: 100%;
+    display: flex;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* .bg-blur{
+    position: absolute;
+    box-shadow: 0 0 1000px 50px var(--second-color);
+    z-index: -1; 
+} */
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--first-color);
+}
+
+nav{
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 2rem 1rem; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-logo{
+    max-width: 125px;
+}
+
+.nav-links{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.link a{
+    position: relative;
+    padding-bottom: 0.3rem;
+    color: var(--white-color);
+}
+
+.link a::after{
+    content:""; 
+    position: absolute;
+    height: 2px;
+    width: 0;
+    left: 0;
+    bottom: 0;
+    background-color: var(--second-color);
+    transition: 0.2s;
+}
+
+.link a:hover::after{
+    width: 100%;
+}
+
+.header-container{
+    position: relative;
+    padding-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap: 2rem;
+    margin: auto;
+}
+
+.header-container::before{
+    content:"FITNESS";
+    position: absolute;
+    bottom: 5rem;
+    right: 20rem;
+    font-weight: 700;
+    font-size: 10rem;
+    color: var(--white-color);
+    opacity: 0.1;
+    line-height: 7rem;
+    z-index: -1;
+} 
+
+
+/* .header-blur {
+    bottom: 5rem;
+    right: 0;
+} */
+
+.header-content h4{
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--second-color)
+}
+
+.header-content h1{
+    margin-bottom: 1rem;
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: 5rem;
+    color: var(--white-color);
+    
+}
+
+.header-content h1 span{
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px  var(--white-color);
+    
+}
+
+.header-content p{
+    margin-bottom: 2rem;
+    color: var(--text-color-light)
+}
+
+.header-image{
+    position: relative;
+}
+
+.header-image::before{
+    content:"o";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 40rem;
+    font-weight: 400;
+    line-height: 20rem;
+    color: var(--second-color);
+    opacity: 0.1;
+    z-index: -1;
+}
+
+.header-image img{
+    max-width: 350px;
+    margin: auto;
+} 
+
+.inspect-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.inspect-nav{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.inspect-nav span{
+    border: 2px solid var(--white-color);
+    padding: 0 6px;
+    color: var(--white-color);
+    border-radius: 100%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.inspect-nav span:hover{
+    color: var(--second-color);
+    border-color: var(--second-color);
+}
+
+.inspect-grid{
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 2rem;
+}
+
+.inspect-card{
+    padding: 1rem;
+    background-color: var(--first-color-light);
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.inspect-card:hover{
+    background-color: var(--first-color-extra-light);
+    border-color: var(--second-color);
+}
+
+.inspect-card span{
+    display: inline-block;
+    padding: 2px 9px;
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+    color: var(--white-color);
+    background-color: var(--second-color-dark);
+    border-radius: 5px;
+}
+
+.inspect-card h4{
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--white-color);
+}
+
+.inspect-card p{
+    margin-bottom: 1rem;
+    color: var(--text-color-light);
+}
+
+.inspect-card a{
+    color: var(--white-color);
+    transition: 0.3s;
+}
+
+.inspect-card a:hover{
+    color: var(--second-color);
+}
+
+.class-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+}
+
+.class-image{
+    position: relative;
+}
+
+.class-image .img1{
+    position: absolute;
+    height: 300px;
+    right: 0;
+    top: 0;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+.class-image .img2{
+    position: absolute;
+    height: 250px;
+    width: 280px;
+    top: 180px;
+    left: 0;
+    bottom: 0;
+    max-width: 300px;
+    border-radius: 10px;
+}
+
+.class-content{
+    padding: 2rem 0;
+}
+
+.class-content .section-header{
+    text-align: left;
+    max-width: 400px;
+}
+
+.class-content p{
+    margin-bottom: 4rem;
+    color: var(--text-color-light);
+    text-align: justify;
+}
+
+.join-image{
+    margin-top: 4rem;
+    position: relative;
+}
+
+.join-image img{
+    border-radius: 10px;
+}
+
+.join-grid{
+    position: absolute;
+    bottom: -5rem;
+    width: calc(100% - 4rem);
+    padding: 2rem;
+    margin: 0 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    background-color: var(--first-color-light);
+    border-radius: 10px;
+}
+
+.join-card{
+    flex: 1 1 250px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.join-card span{
+    padding: 5px 12px;
+    font-size: 1.75rem;
+    color: var(--white-color);
+    background-color: var(--second-color-dark);
+    border-radius: 5px;
+}
+
+.join-card h4{
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--white-color);
+}
+
+.join-card p{
+    color: var(--text-color-light);
+}
+
+
